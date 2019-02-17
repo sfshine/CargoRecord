@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_Record"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="发货记录"/>
+        <item
+                android:id="@+id/nav_Person"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="货物管理"/>
+        <item
+                android:id="@+id/nav_Cargo"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="发货人员管理"/>
+        <item
+                android:id="@+id/nav_Cushion"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="座垫来源管理"/>
+        <item
+                android:id="@+id/nav_Manufacture"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="厂家管理"/>
+    </group>
+</menu>

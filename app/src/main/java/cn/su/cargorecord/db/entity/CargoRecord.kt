@@ -58,4 +58,9 @@ data class CargoRecord(
         1, 1, 1, 1,
         orderTime, Date(), 10.00, note
     )
+
+    constructor(note: String?, money: Double?, orderTime: Date) : this(
+        1, 1, 1, 1,
+        orderTime, Date(), money ?: 0.0, note ?: ""
+    )
 }

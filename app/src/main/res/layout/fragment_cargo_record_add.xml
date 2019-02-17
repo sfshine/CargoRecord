@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+                name="viewModel"
+                type="cn.su.cargorecord.model.CargoRecordAddModel"/>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+        <EditText
+                android:text="@={viewModel.note}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入备注"/>
+        <EditText
+                android:inputType="numberDecimal"
+                android:text="@={viewModel.money}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入金额"/>
+        <Button
+                android:onClick="@{clickListener}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提交"/>
+    </LinearLayout>
+</layout>

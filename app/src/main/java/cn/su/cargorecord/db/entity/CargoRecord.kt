@@ -32,15 +32,12 @@ import java.util.*
         )],
     indices = [
         Index("deliverPersonId"),
-        Index("cargoId"),
-        Index("cushionId"),
-        Index("manufactureId")]
+        Index("cargoId")
+    ]
 )
 data class CargoRecord(
-    @ColumnInfo(name = "cushionId") var cushionId: Int,
     @ColumnInfo(name = "deliverPersonId") var deliverPersonId: Int,
     @ColumnInfo(name = "cargoId") var cargoId: Int,
-    @ColumnInfo(name = "manufactureId") var manufactureId: Int,
     @ColumnInfo(name = "orderTime") var orderTime: Date,
     @ColumnInfo(name = "deliverTime") var deliverTime: Date,
     @ColumnInfo(name = "money") var money: Double,
@@ -50,17 +47,19 @@ data class CargoRecord(
     @ColumnInfo(name = "id")
     var id: Long = 0
 
-    override fun toString(): String {
-        return "CargoRecord(recordId='$id', cushionId=$cushionId, deliverPersonId=$deliverPersonId, cargoId=$cargoId, manufactureId=$manufactureId, orderTime=$orderTime, deliverTime=$deliverTime, money=$money, note='$note')"
-    }
+    @ColumnInfo(name = "personName")
+    var personName: String = ""
 
     constructor(note: String, orderTime: Date) : this(
-        1, 1, 1, 1,
-        orderTime, Date(), 10.00, note
+        1, 1, orderTime, Date(), 10.00, note
     )
 
     constructor(note: String?, money: Double?, orderTime: Date) : this(
-        1, 1, 1, 1,
-        orderTime, Date(), money ?: 0.0, note ?: ""
+        1, 1, orderTime, Date(), money ?: 0.0, note ?: ""
     )
+
+    override fun toString(): String {
+        return "CargoRecord(deliverPersonId=$deliverPersonId, cargoId=$cargoId, orderTime=$orderTime, deliverTime=$deliverTime, money=$money, note='$note', id=$id, personName='$personName')"
+    }
+
 }

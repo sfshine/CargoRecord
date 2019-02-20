@@ -20,7 +20,7 @@ interface CargoRecordDao {
     @Query("SELECT * FROM cargoRecord ORDER BY orderTime desc")
     fun getAllCargoRecords(): LiveData<List<CargoRecord>>
 
-    @Query("SELECT * FROM cargoRecord WHERE orderTime>=:orderTime ORDER BY orderTime desc")
+    @Query("SELECT cargoRecord.*, person.name AS personName FROM cargoRecord,person WHERE cargoRecord.deliverPersonId = person.id AND orderTime >= :orderTime ORDER BY orderTime desc")
     fun getCargoRecordSince(orderTime: Date): LiveData<List<CargoRecord>>
 
     @Query("SELECT * FROM cargoRecord WHERE orderTime=:orderTime")

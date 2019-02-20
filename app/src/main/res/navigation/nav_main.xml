@@ -18,6 +18,6 @@
 
     <fragment android:id="@+id/cargoRecordAddFragment"
               android:name="cn.su.cargorecord.fragment.CargoRecordAddFragment"
-              android:label="fragment_cargo_record_add"
+              android:label="@string/cargo_record_add"
               tools:layout="@layout/fragment_cargo_record_add"/>
 </navigation>

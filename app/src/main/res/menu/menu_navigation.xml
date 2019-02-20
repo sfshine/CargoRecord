@@ -14,14 +14,5 @@
                 android:id="@+id/nav_Cargo"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="发货人员管理"/>
-        <item
-                android:id="@+id/nav_Cushion"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="座垫来源管理"/>
-        <item
-                android:id="@+id/nav_Manufacture"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="厂家管理"/>
     </group>
-
 </menu>

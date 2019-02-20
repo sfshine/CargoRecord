@@ -39,16 +39,14 @@ class CargoRecordAddFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         Log.d(TAG, "note: ${mViewModel.note.get()} \n money: ${mViewModel.money.get()}")
         var cargoRecord = CargoRecord(mViewModel.note.get(), mViewModel.money.get()?.toDouble(), Date())
-        Thread {
-            mViewModel.addCargoRecord(cargoRecord)
-        }.start()
+        mViewModel.addCargoRecord(cargoRecord)
         NavHostFragment.findNavController(this).popBackStack()
         closeIME()
     }
 
     private fun closeIME() {
         val view = activity?.window?.peekDecorView()
-        val inputmanger = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
-        inputmanger?.hideSoftInputFromWindow(view?.windowToken, 0)
+        val inputManger = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        inputManger?.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 }

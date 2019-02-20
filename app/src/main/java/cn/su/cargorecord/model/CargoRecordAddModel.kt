@@ -12,6 +12,8 @@ class CargoRecordAddModel : ViewModel() {
     val note = ObservableField<String>("")
     val money = ObservableField<String>("")
     fun addCargoRecord(cargoRecord: CargoRecord) {
-        AppDatabase.INSTANCE.cargoRecordDao().add(cargoRecord)
+        Thread {
+            AppDatabase.INSTANCE.cargoRecordDao().add(cargoRecord)
+        }.start()
     }
 }

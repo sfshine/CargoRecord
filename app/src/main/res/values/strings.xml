@@ -8,8 +8,5 @@
 
     <string name="cargo_record">出货记录</string>
     <string name="record_empty">无记录</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="cargo_record_add">记一笔</string>
 </resources>

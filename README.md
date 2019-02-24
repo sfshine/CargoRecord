@@ -14,15 +14,7 @@ Jetpack的数据库框架Room可以简单的理解为Retrofit的数据库版本,
 
 有痛点就有需求,Room独辟蹊径并更进一步,利用注解的方式将SQL语句封装到数据库访问对象(data access objects, or DAOs)中,将数据库操作的复杂度和学习成本又降低了一个层次:
 
-[图 start]
-
-斧子---Android原生数据库操作
-
-枪-----GreenDao等数据库框架
-
-坦克---Room Persistence
-
-[图 end]
+![](https://oscimg.oschina.net/oscnet/f652884451e27964d2106cc589f9238b704.jpg)
 
 对开发而言,一个DAO只是集成了SQL信息的接口类,举个例子:
 数据对象
